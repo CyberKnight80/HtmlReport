@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<body>
+
+    <table id="userTable">
+        <tr>
+            <th>Имя</th>
+            <th>Возраст</th>
+        </tr>
+    </table>
+
+    <button onclick="addRow()">Добавить строку</button>
+
+    <script>
+        function addRow() {
+            let table = document.getElementById("userTable");
+            let row = table.insertRow();
+    
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+    
+            cell1.innerText = "Новый пользователь";
+            cell2.innerText = Math.floor(Math.random() * 50); // Случайный возраст
+        }
+    </script>
+</body>
